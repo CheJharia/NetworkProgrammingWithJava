@@ -13,7 +13,7 @@ public class TCPEchoServer {
 	 * Step 1: Create a ServerSocket object
 	 */
 	private static ServerSocket serverSocket;
-	private static final int PORT = 1234;
+	private static final int PORT = 1237;
 
 	public static void main(String[] args) {
 
@@ -67,6 +67,7 @@ public class TCPEchoServer {
 				 * Step 5 : close the connection
 				 */
 				link.close();
+				serverSocket.close();
 			} catch (Exception e) {
 				System.out.println("Unable to disconnect!");
 				System.exit(1);
