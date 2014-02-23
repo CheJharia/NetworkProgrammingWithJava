@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class TCPEchoClient {
 	private static InetAddress host;
-	private static final int PORT = 1237;
+	private static final int PORT = 1240;
 
 	public static void main(String[] args) {
 		try {
