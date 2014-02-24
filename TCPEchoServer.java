@@ -13,7 +13,7 @@ public class TCPEchoServer {
 	 * Step 1: Create a ServerSocket object
 	 */
 	private static ServerSocket serverSocket;
-	private static final int PORT = 1240;
+	private static final int PORT = 1234;
 
 	public static void main(String[] args) {
 
