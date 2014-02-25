@@ -66,7 +66,6 @@ public class TCPEchoServer {
 				/*
 				 * Step 5 : close the connection
 				 */
-				link.close();
 				serverSocket.close();
 			} catch (Exception e) {
 				System.out.println("Unable to disconnect!");
