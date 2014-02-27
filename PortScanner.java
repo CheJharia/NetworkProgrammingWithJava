@@ -81,16 +81,19 @@ public class PortScanner extends JFrame implements ActionListener {
 			// convert the url string into and InetAddress object..
 			InetAddress theAddress = InetAddress.getByName(host);
 			report.append("IP address: " + theAddress + "\n");
-			for (int i = 0; i < 30; i++) {
+			report.append("Scanning start ...");
+			for (int i = 0; i < 30 ; i++) {
 				try {
-					//attempt to establish a socket on port i...
-					socket= new Socket(host, i);
+					// attempt to establish a socket on port i...
+					socket = new Socket(host, i);
 					// if no IOException thrown, there must
 					// be a service running on the port...
-					report.append("There is a server on  port" + i + ".\n");
+					report.append("There is a server on  port " + i + ".\n");
 					socket.close();
-				} catch (IOException ioEx) {}
+				} catch (IOException ioEx) {
+				}
 			}
+			report.append("Scanning completed");
 		} catch (UnknownHostException uHEx) {
 			report.setText("Unknown host!");
 		}
